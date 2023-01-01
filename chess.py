@@ -12,13 +12,13 @@ while (counter <= 4032):
     while (bishop == rook):
         rook = int(random.uniform(1,3))
     #####################################
-    bishopRoot = []
+    bishopRoute = []
     #####################################
     upperLeft = bishop
 
     while (upperLeft % 8 != 1 ):
         upperLeft = upperLeft - 9
-        bishopRoot.append(upperLeft)
+        bishopRoute.append(upperLeft)
         if (upperLeft / 8 <= 1):
             break
 
@@ -27,7 +27,7 @@ while (counter <= 4032):
 
     while (upperRight % 8 != 0 ):
         upperRight = upperRight - 7
-        bishopRoot.append(upperRight)
+        bishopRoute.append(upperRight)
         if (upperRight / 8 <= 1):
             break
 
@@ -36,7 +36,7 @@ while (counter <= 4032):
 
     while (lowerLeft % 8 != 1 ):
         lowerLeft = lowerLeft + 7
-        bishopRoot.append(lowerLeft)
+        bishopRoute.append(lowerLeft)
         if (lowerLeft / 8 > 7):
             break
 
@@ -45,12 +45,12 @@ while (counter <= 4032):
 
     while (lowerRight % 8 != 0 ):
         lowerRight = lowerRight + 9
-        bishopRoot.append(lowerRight)
+        bishopRoute.append(lowerRight)
         if (lowerRight / 8 > 7):
             break
     #####################################
 
-    if (rook in bishopRoot):
+    if (rook in bishopRoute):
         bishop_win_counter = bishop_win_counter + 1
     elif(int((rook - 1) / 8 ) == int((bishop - 1) / 8 ) ):
         rook_win_counter = rook_win_counter + 1
